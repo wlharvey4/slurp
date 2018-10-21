@@ -10,7 +10,7 @@ use Test::More;
 
 plan tests => 6;
 
-my $data = <<TEXT ;
+my $data = <<TEXT;
 line 1
 more text
 TEXT

@@ -13,7 +13,7 @@ plan(tests => 6);
 
 my $file = temp_file_path();
 
-my $data = <<TEXT ;
+my $data = <<TEXT;
 line 1
 more text
 TEXT
@@ -32,4 +32,4 @@ TEXT
     ok(!$err, 'write_file: no_clobber, err_mode quiet opts - existing file - no exceptions!');
 }
 
-unlink $file ;
+unlink $file;

@@ -7,11 +7,11 @@ use lib File::Spec->catdir(File::Spec->rel2abs(File::Basename::dirname(__FILE__)
 use FileSlurpTest qw(temp_file_path trap_function);
 
 use File::Slurp qw(write_file prepend_file read_file);
-use Test::More ;
+use Test::More;
 
 plan tests => 32;
 
-my $existing_data = <<PRE ;
+my $existing_data = <<PRE;
 line 1
 line 2
 more

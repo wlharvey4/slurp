@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Carp ;
+use Carp;
 use File::Spec ();
 use File::Slurp;
 use File::Temp qw(tempfile);
@@ -25,7 +25,7 @@ my @text_data = (
 );
 
 my @bin_sizes = (1000, 1024 * 1024);
-my @bin_stuff = ("\012", "\015", "\012\015", "\015\012", map {chr $_} (0 .. 32) ) ;
+my @bin_stuff = ("\012", "\015", "\012\015", "\015\012", map {chr $_} (0 .. 32) );
 my @bin_data;
 foreach my $size (@bin_sizes) {
     my $data = '';

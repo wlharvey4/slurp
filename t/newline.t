@@ -12,13 +12,13 @@ use File::Slurp qw(read_file write_file);
 use Test::More;
 plan tests => 2;
 
-my $data = "\r\n\r\n\r\n" ;
+my $data = "\r\n\r\n\r\n";
 my $file_name = temp_file_path();
 
 stdio_write_file($file_name, $data);
 my $slurped_data = read_file($file_name);
 
-my $stdio_slurped_data = stdio_read_file( $file_name ) ;
+my $stdio_slurped_data = stdio_read_file( $file_name );
 
 
 print 'data ', unpack( 'H*', $data), "\n",

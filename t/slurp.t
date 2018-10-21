@@ -22,4 +22,4 @@ write_file($file, $data);
 my $read_buf = slurp($file);
 is($read_buf, $data, 'slurp alias');
 
-unlink $file ;
+unlink $file;

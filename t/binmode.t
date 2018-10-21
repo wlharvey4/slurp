@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Carp ;
+use Carp;
 use File::Spec ();
 use File::Slurp;
 use File::Temp qw(tempfile);

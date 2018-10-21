@@ -24,7 +24,7 @@ local $^W;
     sub stringify { $_[0]->{path} }
 }
 
-plan tests => 3 ;
+plan tests => 3;
 
 my (undef, $path) = tempfile('tempXXXXX', DIR => File::Spec->tmpdir, OPEN => 0);
 my $data = "random junk\n";

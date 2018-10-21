@@ -7,7 +7,7 @@ use lib File::Spec->catdir(File::Spec->rel2abs(File::Basename::dirname(__FILE__)
 use FileSlurpTest qw(temp_file_path trap_function);
 use File::Slurp qw(read_file write_file);
 use Scalar::Util qw(blessed);
-use Test::More ;
+use Test::More;
 
 plan tests => 12;
 

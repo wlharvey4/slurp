@@ -5,7 +5,7 @@ use File::Spec ();
 use File::Slurp;
 use File::Temp qw(tempfile);
 use IO::Handle ();
-use POSIX qw( :fcntl_h ) ;
+use POSIX qw( :fcntl_h );
 use Test::More;
 
 plan tests => 9;
@@ -21,7 +21,7 @@ my $data_text = join '', @data_lines;
 ok($data_text, 'Got a good baseline text');
 
 # seek back to that inital BYTES position
-my $seek = seek(\*DATA, $data_seek, 0) || die "seek $!" ;
+my $seek = seek(\*DATA, $data_seek, 0) || die "seek $!";
 ok($seek, 'seek: Move back to original __DATA__ position');
 
 # first slurp in the text
@@ -30,7 +30,7 @@ ok($slurp_text, 'read_file: scalar context - grabbed __DATA__');
 is($slurp_text, $data_text, 'scalar read matches baseline');
 
 # seek back to that inital BYTES position
-$seek = seek(\*DATA, $data_seek, 0) || die "seek $!" ;
+$seek = seek(\*DATA, $data_seek, 0) || die "seek $!";
 ok($seek, 'seek: Move back to original __DATA__ position');
 
 # first slurp in the lines

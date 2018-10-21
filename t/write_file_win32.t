@@ -9,7 +9,7 @@ use lib File::Spec->catdir(File::Spec->rel2abs(File::Basename::dirname(__FILE__)
 use FileSlurpTest qw(temp_file_path trap_function);
 
 use File::Slurp qw(write_file read_file);
-use Test::More ;
+use Test::More;
 
 plan tests => 1;
 

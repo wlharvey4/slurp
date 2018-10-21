@@ -125,7 +125,7 @@ sub test_to_pipe {
         # write_file(\*WRITE_FH, $data);
         warn "PARENT write\n";
         # is($read_buf, $data, "pipe slurp/spew of $size bytes");
-        close \*WRITE_FH ;
+        close \*WRITE_FH;
     }
     else {
         # child

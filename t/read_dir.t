@@ -48,18 +48,18 @@ my $dir_entries_ref = read_dir($test_dir);
 is_deeply($dir_entries_ref, \@expected_entries, "dir in array ref");
 
 my @prefixed_entries;
-@prefixed_entries = read_dir( $test_dir, { prefix => 1 } ) ;
+@prefixed_entries = read_dir( $test_dir, { prefix => 1 } );
 is_deeply(
     [ sort @prefixed_entries ],
     [ map File::Spec->catfile($test_dir, $_), @dir_entries ],
-	'prefix option in hash ref'
+    'prefix option in hash ref'
 );
 
-@prefixed_entries = read_dir( $test_dir, prefix => 1 ) ;
+@prefixed_entries = read_dir( $test_dir, prefix => 1 );
 is_deeply(
     [ sort @prefixed_entries ],
     [ map File::Spec->catfile($test_dir, $_), @dir_entries ],
-	'prefix option as key-value pair'
+    'prefix option as key-value pair'
 );
 
 # clean up
